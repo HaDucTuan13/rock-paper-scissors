@@ -144,10 +144,18 @@ scissorsBtn.addEventListener("click",()=>{
 
 // playGame();
 function Display(computerChoice, result){
-    computerSide.innerHTML = `<p>Computer chose: <b>${computerChoice}</b></p>`;
-    resultDiv.innerHTML = `<p>Result: ${result}</p><p>Score: ${humanScore}-${computerScore}</p>`;
+    computerSide.innerHTML = `<h2>Computer chose: <h2>${computerChoice}</h2></h2>`;
+    resultDiv.innerHTML = `<h2>Result: ${result}</h2><h2>Score: ${humanScore}-${computerScore}</h2>`;
     if(humanScore == 5 || computerScore == 5){
-        const winner=  humanScore ==5? "You win, Congratz!" : "You lose, sadly.";
+        const winner=  humanScore ==5? "You win, Congratz! The game will reset." : "You lose, sadly. The game will reset.";
         resultDiv.innerHTML += `<p>${winner}</p>`;
+        setTimeout(resetGame, 3000);
     }
+}
+
+function resetGame(){
+    humanScore=0;
+    computerScore=0;
+    resultDiv.innerHTML = "<h2>Current Score</h2>";
+    computerSide.innerHTML = "<h2>Computer choice</h2>";
 }
