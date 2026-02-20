@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+
+}
+
+#game-space {
+    display: flex;
+    justify-content: space-between;
+}
+
+#player-side, #score, #computer-side {
+    display: flex;
+    flex-direction: column;
+}
