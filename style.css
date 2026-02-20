@@ -10,7 +10,7 @@
 
 #game-space {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 #player-side, #score, #computer-side {
